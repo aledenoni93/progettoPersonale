@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.carousel-caption {
+  top: 27rem;
+  bottom: auto;
+
+
+  h3 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 40px;
+    text-shadow: black 2px 3px 3px;
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
