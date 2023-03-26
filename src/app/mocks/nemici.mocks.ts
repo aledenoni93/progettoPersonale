@@ -62,34 +62,85 @@ export const NEMICI : Nemico[] = [
     pubblicato: true
   },
   {
-    _id: 1,
-    nome: "Custode di tombe",
-    descrizione: "I custodi di tombe si trovano nel Cimitero delle Ceneri e nello Santuario del legame del Fuoco, le prime aree del gioco, e quindi sono piuttosto deboli. Indossano abiti e mantelli di colore scuro, sembrano lenti e disinteressati ai loro dintorni. Impugnano varie armi, tra cui: balestre leggere con dardi esplosivi, spade spezzate, spade corte, lance e coltelli del bandito (solo nelle Tombe deserte). Alcuni guardiani sembrano docili e svogliati; si siedono sul percorso o si appoggiano alle mura montuose che adornano i cimiteri e l'arena. Tuttavia, attaccheranno comunque il giocatore una volta che si avvicina, quindi è consigliabile prestare attenzione.",
-    area: "Cimitero della cenere, Santuario del Legame del fuoco",
-    debolezza: "Spadone massacra vuoti, tutti gli status alterati",
-    immagine: "../../assets/images/custode-di-tombe.jpg",
+    _id: 7,
+    nome: "Evangelista della capitale",
+    descrizione: "Comunemente indicati come Evangelisti, dal nome del loro set di armatura. Spesso ti deridono o cantano, anche quando non ti stanno attaccando attivamente.",
+    area: "Irithyll della valle boreale, Cattedrale del profondo, Borgo dei nonmorti",
+    debolezza: "Fuoco, armi contundenti",
+    immagine: "../../assets/images/evangelista-della-capitale.jpg",
     data: "24/03/2023",
     pubblicato: true
   },
   {
-    _id: 1,
-    nome: "Custode di tombe",
-    descrizione: "I custodi di tombe si trovano nel Cimitero delle Ceneri e nello Santuario del legame del Fuoco, le prime aree del gioco, e quindi sono piuttosto deboli. Indossano abiti e mantelli di colore scuro, sembrano lenti e disinteressati ai loro dintorni. Impugnano varie armi, tra cui: balestre leggere con dardi esplosivi, spade spezzate, spade corte, lance e coltelli del bandito (solo nelle Tombe deserte). Alcuni guardiani sembrano docili e svogliati; si siedono sul percorso o si appoggiano alle mura montuose che adornano i cimiteri e l'arena. Tuttavia, attaccheranno comunque il giocatore una volta che si avvicina, quindi è consigliabile prestare attenzione.",
-    area: "Cimitero della cenere, Santuario del Legame del fuoco",
-    debolezza: "Spadone massacra vuoti, tutti gli status alterati",
-    immagine: "../../assets/images/custode-di-tombe.jpg",
+    _id: 8,
+    nome: "Ratto",
+    descrizione: "Gli avventurieri intrepidi non sono mai troppo lontani da un branco di topi, che annusano curiosamente l'aria alla ricerca di avanzi e potenziali prede. Questi portatori di pestilenza non dovrebbero rappresentare altro che un fastidio, ma possono comunque essere indisciplinati e difficili da prevedere in grandi numeri. È saggio attaccare un ratto alla volta, poiché sono particolarmente abili nel circondare i giocatori. Gli attacchi taglienti sono particolarmente utili contro questi nemici, e alcuni colpi precisi elimineranno rapidamente i non desiderati. I loro attacchi sono in gran parte prevedibili e il tempo di recupero è abbastanza ampio per consentire ai giocatori di attaccare più volte.",
+    area: "Ogni area",
+    debolezza: "Armi da taglio, fuoco",
+    immagine: "../../assets/images/ratto.jpg",
     data: "24/03/2023",
     pubblicato: true
   },
   {
-    _id: 1,
-    nome: "Custode di tombe",
-    descrizione: "I custodi di tombe si trovano nel Cimitero delle Ceneri e nello Santuario del legame del Fuoco, le prime aree del gioco, e quindi sono piuttosto deboli. Indossano abiti e mantelli di colore scuro, sembrano lenti e disinteressati ai loro dintorni. Impugnano varie armi, tra cui: balestre leggere con dardi esplosivi, spade spezzate, spade corte, lance e coltelli del bandito (solo nelle Tombe deserte). Alcuni guardiani sembrano docili e svogliati; si siedono sul percorso o si appoggiano alle mura montuose che adornano i cimiteri e l'arena. Tuttavia, attaccheranno comunque il giocatore una volta che si avvicina, quindi è consigliabile prestare attenzione.",
-    area: "Cimitero della cenere, Santuario del Legame del fuoco",
-    debolezza: "Spadone massacra vuoti, tutti gli status alterati",
-    immagine: "../../assets/images/custode-di-tombe.jpg",
+    _id: 9,
+    nome: "Demone",
+    descrizione: "Il Demone è un mini-boss in Dark Souls 3. Si trova vagando nell'Insediamento dei non morti e nelle Catacombe di Carthus. Il Demone dell'Insediamento dei non morti è legato alla missione di Siegward di Catarina, mentre il Demone delle Catacombe di Carthus rilascia un'anima speciale che può essere utilizzata nella Trasposizione dell'Anima.",
+    area: "Insediamento dei non morti, catacombe di Carthus",
+    debolezza: "Armi del cavaliere nero, Oscurità",
+    immagine: "../../assets/images/demone.jpg",
     data: "24/03/2023",
     pubblicato: true
   },
+  {
+    _id: 10,
+    nome: "Licantropo",
+    descrizione: "I licantropi sono grandi esseri vuoti dagli occhi rossi con croci incatenate sulla schiena. Indossano stracci strappati e hanno artigli affilati che sporgono dalle loro dita allungate. Di solito si vedono seduti, attaccando solo quando qualcuno si avvicina. Stranamente, alcuni licantropi non attaccheranno a meno che non vengano provocati.",
+    area: "Strada dei sacrifici",
+    debolezza: "Sanguinamento, fuoco, oscurità",
+    immagine: "../../assets/images/Licantropo.jpg",
+    data: "24/03/2023",
+    pubblicato: true
+  },
+  {
+    _id: 11,
+    nome: "Cacciatori di licantropi",
+    descrizione: "I Cacciatori di Licantropi si trovano in pattuglia lungo la Strada dei Sacrifici. Portano con sé una grande picca di legno che usano come lancia, e spesso si muovono in gruppo. Alcuni di questi cacciatori potrebbero essere visti riposare o sembrare disinteressati all'ambiente circostante, proprio come altri vuoti. I Cacciatori di Licantropi possono essere allertati dal suono, ma solo su un livello molto basilare (il loro raggio uditivo è minimo).",
+    area: "Strada dei sacrifici",
+    debolezza: "Fuoco",
+    immagine: "../../assets/images/cacciatore-di-licantropi.jpg",
+    data: "24/03/2023",
+    pubblicato: true
+  },
+  {
+    _id: 12,
+    nome: "Cavaliere nero",
+    descrizione: "I Cavalieri Neri sono grandi e imponenti nemici spesso trovati a guardia di posizioni chiave. Nonostante impugnino armi diverse, tutti condividono la stessa armatura di un nero intenso con corna che sporgono dall'elmo. Quando provocati, i Cavalieri Neri sono sorprendentemente agili e possono facilmente cogliere un giocatore alla sprovvista con una serie di attacchi ad alto danno. I Cavalieri Neri erano i cavalieri d'elite di Gwyn, il primo Signore delle Ceneri. Tuttavia, furono bruciati in cenere, lasciando solo i loro fantasmi a vagare per la terra.",
+    area: "In quasi tutte le aree",
+    debolezza: "Oscurità,ghiaccio,veleno",
+    immagine: "../../assets/images/cavaliere-nero.jpg",
+    data: "24/03/2023",
+    pubblicato: true
+  },
+  {
+    _id: 13,
+    nome: "Verme cadavere",
+    descrizione: "Il Verme-Cadavere è una massa di vermi e carne contorti, tutti attaccati ad un singolo vuoto. Sono spesso trovati in aree contenenti acqua o sporcizia, in linea con la loro natura. Come ci si aspetta, i Verme-Cadavere subiscono danni massicci dagli attacchi basati sul fuoco a causa della loro composizione.",
+    area: "Cattedrale delle profondità",
+    debolezza: "Fuoco",
+    immagine: "../../assets/images/verme-cadavere.jpg",
+    data: "24/03/2023",
+    pubblicato: true
+  },
+  {
+    _id: 14,
+    nome: "Cavaliere della cattedrale",
+    descrizione: "Cavallieri imponenti con elmi e corazze di metallo nero adornati d'oro, le braccia e le gambe coperte di maglia.",
+    area: "Cattedrale delle profondità",
+    debolezza: "Ghiaccio, fulmine",
+    immagine: "../../assets/images/cavaliere-della-cattedrale.jpg",
+    data: "24/03/2023",
+    pubblicato: true
+  }
+
 
 ]

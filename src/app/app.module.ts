@@ -8,13 +8,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { HomeComponent } from './components/home/home.component';
+import { NemiciComponent } from './components/nemici/nemici.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CarouselComponent,
-    HomeComponent
+    HomeComponent,
+    NemiciComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

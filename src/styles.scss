@@ -4,6 +4,7 @@
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
+  background-color: rgb(206, 203, 203) !important;
 }
 
 .carousel-caption {
@@ -15,6 +16,9 @@ body {
     font-family: 'Abril Fatface', cursive;
     font-size: 40px;
     text-shadow: black 2px 3px 3px;
+    color: rgb(206, 203, 203);
+    //background-color: rgba(0, 0, 0, 0.658) !important;
+
   }
 }
 
