@@ -1,38 +1,77 @@
-.container{
-  padding-left: 0;
-  padding-right: 0;
-  margin-bottom: 0 !important;
-}
-
-footer{
+.container-footer{
   background-color: black;
+  float: left;
+  width: 100%;
+  margin-top: 30px;
+  padding: 16px;
+
+  footer{
+
+    .container-flex {
+       display: flex;
+       justify-content: space-between;
+    }
+
+    .container-logo {
+      display: flex;
+      align-items: center;
+
+      .nome-brand-the {
+        color: #9B3814;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: 'Cinzel Decorative', cursive;
+        font-weight: bold;
+      }
+
+      .nome-brand{
+        color: #9B3814;
+        text-decoration: none;
+        font-size: 40px;
+        font-family: 'Cinzel Decorative', cursive;
+        font-weight: bold;
+      }
+    }
+
+    .container-admin{
+
+      margin-right: 100px;
+
+      h3 {
+        color: #9B3814;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      h5 {
+        color: #FFFFFF8C;
+        font-size: 15px;
+        margin-top: 15px;
+      }
+    }
+
+    .site-map{
+
+      margin-right: 100px;
+
+      h3 {
+        color: #9B3814;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .map-link{
+      text-decoration: none;
+      color: #FFFFFF8C;
+      font-size: 15px;
+      }
+    }
+  }
+
 }
 
-.icona-soulsborne{
-  width: 60px;
-  margin-right: 5 px;
 
-}
 
-.py-3 {
-  padding-top: 2px !important;
-  padding-bottom: 0px !important;
-}
 
-.colore-testo{
-  color: white;
-}
-
-.text-muted {
-  --bs-text-opacity: 1;
-  color: white !important;
-}
-
-.my-4 {
-  margin-top: 1.5rem !important;
-  margin-bottom: 0rem !important;
-}
-
-.container-xl, .container-lg, .container-md, .container-sm, .container {
-  max-width: 100%!important;
-}

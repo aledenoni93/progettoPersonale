@@ -10,6 +10,10 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { HomeComponent } from './components/home/home.component';
 import { NemiciComponent } from './components/nemici/nemici.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { NemicoCardComponent } from './shared/nemico-card/nemico-card.component';
+import { NemiciListComponent } from './components/nemici/nemici-list/nemici-list.component';
+import { DetailComponent } from './components/nemici/detail/detail.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +22,10 @@ import { FooterComponent } from './shared/footer/footer.component';
     CarouselComponent,
     HomeComponent,
     NemiciComponent,
-    FooterComponent
+    FooterComponent,
+    NemicoCardComponent,
+    NemiciListComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

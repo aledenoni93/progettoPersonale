@@ -1,18 +1,35 @@
 .container-titolo{
   h2 {
-    font-size: 35px;
-    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+    font-family: 'Cinzel Decorative', cursive;
     color: #9B3814;
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center;
+    font-weight: bold;
   };
+
+  .the{
+    font-size: 35px;
+    font-family: 'Cinzel Decorative', cursive;
+    color: #9B3814;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+  }
 
   .paragrafo{
     font-size: 25px;
     text-align: justify;
-    margin: 100px;
+    margin: 50px;
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;
+
+    .iniziale {
+      font-size: 50px;
+      font-family: 'Cinzel Decorative', cursive;
+      color: #9B3814;
+      font-weight: bold;
+    }
   }
 
   .border {
@@ -24,45 +41,5 @@
   #main-container{
     padding: 16px;
   }
-
-  // .card {
-  //   display: inline-block;
-  //   margin: 10px;
-  //   width: 250px;
-  //   border: 1px solid #ccc;
-  //   border-radius: 5px;
-  //   text-align: center;
-  //   padding: 10px;
-  // }
-
-  // .card img {
-  //   width: 100%;
-  //   border-radius: 5px;
-  // }
-
-  // .card h5 {
-  //   font-size: 20px;
-  //   margin-top: 10px;
-  // }
-
-  // .card p {
-  //   font-size: 14px;
-  //   margin-top: 5px;
-  // }
-
-  // .card .button {
-  //   display: block;
-  //   background-color: #007bff;
-  //   color: #fff;
-  //   padding: 5px 10px;
-  //   border-radius: 5px;
-  //   text-decoration: none;
-  //   margin-top: 10px;
-  // }
-
-  // .card-image{
-  //   width: 20px;
-  // }
-
 
 }

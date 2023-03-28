@@ -8,13 +8,36 @@ header {
   margin-right: 5 px;
 }
 
-.colore-testo{
-  color: #9B3814;
+.container-logo {
+  display: flex;
+  align-items: center;
+
+  .nome-brand-the {
+    color: #9B3814;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .nome-brand{
+    color: #9B3814;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.testo{
+  font-family: 'Cinzel Decorative', cursive;
 }
 
  .pulsanti {
-  display: flex;
-  justify-content: end;
+  display: flex-end;
   width: 100% !important;
 }
 

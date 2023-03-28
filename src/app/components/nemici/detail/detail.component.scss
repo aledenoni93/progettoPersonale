@@ -1,0 +1,68 @@
+
+
+.container-flex{
+  display: flex;
+  margin: 0 50px 50px 50px;
+}
+
+.detail-nome {
+  color: #9B3814;
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.detail-image {
+  height:400px;
+  width:200px;
+  background-size: cover;
+}
+
+table {
+  border: 2px solid #9B3814;;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.linea-verticale {
+  height: 100% !important;
+  border-left: 1px solid black !important;
+  color: black !important;
+}
+
+hr {
+  color: red;
+}
+
+// .detail-description{
+//   padding: 20px;
+//   font-family: 'Montserrat', sans-serif;
+//   text-align: justify;
+// }
+
+// .border{
+//   border: 2px solid $primary-color-1 !important;
+//   padding: 20p !important;
+//   border-radius: 10px !important;
+// }
+
+// .detail-difficulty{
+//   color: $primary-color-1;
+//   font-size: 30px;
+//   padding: 20px;
+//   font-weight: bold;
+// }
+
+// .detail-data{
+//   text-align: end;
+//   padding: 10px;
+//   font-family: 'Montserrat', sans-serif;
+//   margin: 0;
+// }

@@ -13,4 +13,9 @@ export class NemicoService {
   getNemici(): Observable<Nemico[]> {
       return of (NEMICI);
   }
+
+  getNemico(id: number): Observable<Nemico> {
+    const nemico = NEMICI.find(nemico => nemico._id === id );
+    return of (nemico);
+  }
 }
