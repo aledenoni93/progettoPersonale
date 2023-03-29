@@ -14,6 +14,10 @@ export class CarouselComponent {
       label : "Guida a tutte le ambientazioni del gioco."},
     {id : 3,
       label : "Le schede dei nemici e le migliori strategie per batterli."},
+    {id : 4,
+      label : "La lista di tutte le armi e armature."},
+    {id : 5,
+      label : "Le migliori build per costruire il tuo personaggio."}
   ];
 
   percorso = "../assets/images/carousel-";

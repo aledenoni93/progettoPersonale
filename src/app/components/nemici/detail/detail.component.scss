@@ -1,68 +1,41 @@
-
-
-.container-flex{
-  display: flex;
-  margin: 0 50px 50px 50px;
-}
-
 .detail-nome {
   color: #9B3814;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Cinzel Decorative', cursive;
   font-size: 40px;
   margin-top: 20px;
   text-align: center;
   font-weight: bold;
 }
 
+.container-flex{
+  display: flex;
+  margin: 0 50px 50px 50px;
+  border: 10px solid black;
+  padding: 10px;
+
+.container-immagine{
 .detail-image {
-  height:400px;
-  width:200px;
+  height:100%;
+  width:300px;
   background-size: cover;
 }
 
-table {
-  border: 2px solid #9B3814;;
-  border-collapse: collapse;
 }
 
-th, td {
-  padding: 8px;
+.detail-identita{
+  color: #9B3814;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
-  font-size: 16px;
+  font-weight: bold;
 }
 
-.linea-verticale {
-  height: 100% !important;
-  border-left: 1px solid black !important;
-  color: black !important;
+.detail{
+  text-align: center;
+  margin: 0 100px 0 100px;
+  font-size: 20px;
 }
 
-hr {
-  color: red;
 }
-
-// .detail-description{
-//   padding: 20px;
-//   font-family: 'Montserrat', sans-serif;
-//   text-align: justify;
-// }
-
-// .border{
-//   border: 2px solid $primary-color-1 !important;
-//   padding: 20p !important;
-//   border-radius: 10px !important;
-// }
-
-// .detail-difficulty{
-//   color: $primary-color-1;
-//   font-size: 30px;
-//   padding: 20px;
-//   font-weight: bold;
-// }
-
-// .detail-data{
-//   text-align: end;
-//   padding: 10px;
-//   font-family: 'Montserrat', sans-serif;
-//   margin: 0;
-// }

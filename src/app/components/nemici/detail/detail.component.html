@@ -6,27 +6,13 @@
     <div class="container-immagine">
       <img class="detail-image" src="{{nemico.immagine}}">
     </div>
-    <table class="detail-list">
-      <tbody>
-        <tr>
-          <th class="detail-nome-riga">Descrizione</th>
-          <td><div class="linea-verticale"></div></td>
-          <td class="detail-descrizione">{{nemico.descrizione}}</td>
-          <hr>
-        </tr>
-        <tr>
-          <th class="detail-nome-riga">Area</th>
-          <td><div class="linea-verticale"></div></td>
-          <td class="detail-area">{{nemico.area}}</td>
-          <hr>
-        </tr>
-        <tr>
-          <th class="detail-nome-riga">Debolezza</th>
-          <td><div class="linea-verticale"></div></td>
-          <td class="detail-debolezza">{{nemico.debolezza}}</td>
-          <hr>
-        </tr>
-      </tbody>
-    </table>
+    <div class="container-dettagli">
+      <h3 class="detail-identita">Descrizione</h3>
+      <p class="detail">{{nemico.descrizione}}</p>
+      <h3 class="detail-identita">Area</h3>
+      <p class="detail">{{nemico.area}}</p>
+      <h3 class="detail-identita">Debolezza</h3>
+      <p class="detail">{{nemico.debolezza}}</p>
+    </div>
   </div>
 </div>

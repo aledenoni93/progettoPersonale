@@ -4,10 +4,9 @@
     <div class="card-body">
       <h5 class="card-title">{{nemico.nome}}</h5>
       <p class="card-text">
-        <!-- {{recipe.description}} -->
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error tempore ratione ex sapiente mollitia assumenda quam optio recusandae maxime, modi quos quasi ducimus molestias doloribus nulla natus omnis a perferendis!
+        {{nemico.descrizione | slice: 0:170}}...
       </p>
-      <a class="btn btn-primary" routerLink="dettaglio/{{nemico.nome}}/{{nemico._id}}">Visualizza</a>
+      <a class="btn btn-primary" routerLink="/nemici/dettaglio/{{nemico.nome}}/{{nemico._id}}">Visualizza</a>
     </div>
   </div>
 </div>

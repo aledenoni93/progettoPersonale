@@ -20,7 +20,7 @@
   .paragrafo{
     font-size: 25px;
     text-align: justify;
-    margin: 50px;
+    margin: 30px 50px 50px 50px;
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;
 
@@ -42,4 +42,14 @@
     padding: 16px;
   }
 
+}
+
+.schede-nemici{
+  font-size: 50px;
+  font-family: 'Cinzel Decorative', cursive;
+  color: #9B3814;
+  margin-bottom: 25px;
+  text-align: center;
+  margin-top: 25px;
+  font-weight: bold;
 }
