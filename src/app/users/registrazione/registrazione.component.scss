@@ -1,0 +1,124 @@
+.foto-registrazione{
+  background-image: url('../../../assets/images/foto-registrazione.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.container-form{
+  // text-align: center;
+  background-color: rgba(0, 0, 0, 0.705);
+
+  h2{
+    font-size: 50px;
+    font-family: 'Cinzel Decorative', cursive;
+    color: #9B3814;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .container-uno {
+      float:left;
+      margin-left: 25%;
+      margin-right: 50px;
+  }
+
+  .container-due {
+    float:left;
+
+  }
+
+  br {
+    clear: left;
+  }
+
+  .container-tre {
+    float: left;
+    margin-left: 25%;
+    margin-right: 50px;
+  }
+
+  .container-quattro {
+    float: left;
+  }
+
+  .container-input{
+    display: flex;
+    flex-direction: column;
+
+    .form-label{
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+      text-shadow: black 2px 3px 3px;
+    }
+
+    input{
+      width: 420px;
+      height: 40px;
+    }
+
+    select{
+      width: 420px;
+      height: 40px;
+    }
+
+  }
+
+  .registration-button{
+    padding:10px;
+    background-color: #9B3814;
+    color: white;
+    border: none;
+    margin: 20px 795px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+}
+
+input.ng-valid.ng-touched{
+  border: 2px solid rgb(7, 216, 7);
+}
+
+select.ng-invalid.ng-touched{
+  border: 2px solid red;
+}
+
+select.ng-valid.ng-touched{
+  border: 2px solid rgb(7, 216, 7);
+}
+
+.help-message{
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+p.help.is-danger{
+  margin-top: 10px;
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+
+
+

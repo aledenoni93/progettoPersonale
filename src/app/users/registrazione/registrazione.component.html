@@ -1,0 +1,77 @@
+<div class="foto-registrazione">
+
+<div class="container-form">
+  <h2>Registrati</h2>
+    <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <div class="container-input container-uno">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" class="form" placeholder="Inserisci il tuo nome" name="name" formControlName="name">
+          <div class="help-message">
+            <p class="help is-danger" *ngIf="!form.get('name').valid && form.get('name').touched">Il campo nome è obbligatorio</p>
+          </div>
+          <label for="surname" class="form-label">Cognome</label>
+          <input type="text" class="form" placeholder="Insersci il tuo cognorme" name="surname" formControlName="surname">
+          <div class="help-message">
+            <p class="help is-danger" *ngIf="!form.get('surname').valid && form.get('surname').touched">Il campo cognome è obbligatorio</p>
+          </div>
+      </div>
+
+      <div class="container-input container-due">
+        <label for="birthdate" class="form-label">Data di nascita</label>
+        <input type="date" class="form" placeholder="Inserisci la tua data di nascita" name="birthdate" formControlName="birthdate">
+        <div class="help-message">
+          <p class="help is-danger" *ngIf="!form.get('birthdate').valid && form.get('birthdate').touched">Il campo data è obbligatorio</p>
+        </div>
+        <label for="gender" class="form-label">Sesso</label>
+        <select name="gender"class="form" formControlName="gender">
+          <option value="M">Maschio</option>
+          <option value="F">Femmina</option>
+          <option value="Altro">Altro</option>
+        </select>
+        <div class="help-message">
+          <p class="help is-danger" *ngIf="!form.get('gender').valid && form.get('gender').touched">Il campo sesso è obbligatorio</p>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="container-input container-tre">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form" placeholder="Inserisci la tua email" name="email" formControlName="email">
+        <div class="help-message">
+          <p class="help is-danger" *ngIf="form.controls.email.hasError('required') && form.get('email').touched">Il campo email è obbligatorio</p>
+          <p class="help is-danger" *ngIf="form.controls['email'].hasError('email') && form.get('email').dirty && form.get('email').touched">Il campo email non contiene una email valida</p>
+        </div>
+        <label for="surname" class="form-label">Username</label>
+        <input type="text" class="form" placeholder="Inserisci uno username" name="username" formControlName="username">
+        <div class="help-message">
+          <p class="help is-danger" *ngIf="!form.get('username').valid && form.get('username').touched">Il campo username è obbligatorio</p>
+        </div>
+      </div>
+
+      <div class="container-input container-quattro">
+        <label for="password" class="form-label">Password</label>
+        <!-- <input type="password" class="form" placeholder="Password" name="password" formControlName="password"> -->
+        <p-password [toggleMask]="true" [feedback]="false" class="form" placeholder="Password" name="password"  formControlName="password" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$"></p-password>
+        <div class="help-message">
+          <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('password').dirty && form.get('password').touched"> Il campo password è obbligatorio</p>
+          <p class="help is-danger" *ngIf="form.controls.password.hasError('pattern')"> Il campo password deve contenere almeno un carattere speciale,una minuscola, una maiuscola e un numero e deve essere lungo da 8 a 16 caratteri</p>
+        </div>
+          <label for="reapetPassword" class="form-label">Ripeti la password</label>
+        <input type="text" class="form" placeholder="Ripeti la password" name="repeatPassword" formControlName="ripetiPassword">
+        <div class="help-message">
+          <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('ripetiPassword').dirty && form.get('ripetiPassword').touched"> Il campo password è obbligatorio</p>
+          <p class="help is-danger" *ngIf="!form.get('ripetiPassword').valid && form.get('ripetiPassword').dirty"> La password deve essere lunga almeno 6 caratteri</p>
+        </div>
+      </div>
+
+      <br>
+
+      <button type="submit" class="registration-button">Registrati</button>
+
+    </form>
+
+</div>
+
+

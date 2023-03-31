@@ -1,3 +1,4 @@
+import { RegistrazioneComponent } from './users/registrazione/registrazione.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,6 +14,7 @@ const routes: Routes = [
     {path: 'dettaglio/:nome/:_id', component: DetailComponent},
     {path: '', pathMatch: 'full', component: NemiciListComponent}
   ]},
+  {path: 'registrazione', component: RegistrazioneComponent},
   {path: '**', redirectTo: 'home'}
 ];
 

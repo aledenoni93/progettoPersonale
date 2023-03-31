@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
-  background-color: rgb(206, 203, 203)!important;
+  background-color: rgb(206, 203, 203) !important;
 }
 
 .carousel-caption {
@@ -19,6 +19,33 @@ body {
 
   }
 }
+
+.p-password, .p-inputtext {
+  width: 420px !important;
+  border: none !important;
+  height: 40px;
+}
+
+img.ng-tns-c32-0 {
+  height:100% !important;
+  width:500px !important;
+  background-size: cover !important;
+  border-radius: 30px 30px 30px 30px !important;
+}
+
+.p-image-preview-indicator {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .3s;
+  border-radius: 30px;
+}
+
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
