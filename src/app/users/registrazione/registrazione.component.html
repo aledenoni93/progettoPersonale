@@ -1,28 +1,32 @@
 <div class="foto-registrazione">
 
 <div class="container-form">
-  <h2>Registrati</h2>
+  <div class="card-form">
+    <!-- <h2>Registrati</h2> -->
+    <h5>UNISCITI ALLA COMMUNITY DI <i class="the">The</i><i> Ashen guide!</i></h5>
+    <h5>Registrati per contribuire alla biblioteca di conoscenze su Dark Souls III</h5>
+    <h5>e condividere le tue esperienze con altre creature della cenere.</h5>
     <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
 
       <div class="container-input container-uno">
           <label for="name" class="form-label">Nome</label>
-          <input type="text" class="form" placeholder="Inserisci il tuo nome" name="name" formControlName="name">
+          <input type="text" class="form" name="name" formControlName="name">
           <div class="help-message">
             <p class="help is-danger" *ngIf="!form.get('name').valid && form.get('name').touched">Il campo nome è obbligatorio</p>
           </div>
-          <label for="surname" class="form-label">Cognome</label>
-          <input type="text" class="form" placeholder="Insersci il tuo cognorme" name="surname" formControlName="surname">
+          <label for="birthdate" class="form-label">Data di nascita</label>
+          <input type="date" class="form" name="birthdate" formControlName="birthdate">
           <div class="help-message">
-            <p class="help is-danger" *ngIf="!form.get('surname').valid && form.get('surname').touched">Il campo cognome è obbligatorio</p>
+            <p class="help is-danger" *ngIf="!form.get('birthdate').valid && form.get('birthdate').touched">Il campo data è obbligatorio</p>
           </div>
       </div>
 
       <div class="container-input container-due">
-        <label for="birthdate" class="form-label">Data di nascita</label>
-        <input type="date" class="form" placeholder="Inserisci la tua data di nascita" name="birthdate" formControlName="birthdate">
-        <div class="help-message">
-          <p class="help is-danger" *ngIf="!form.get('birthdate').valid && form.get('birthdate').touched">Il campo data è obbligatorio</p>
-        </div>
+          <label for="surname" class="form-label">Cognome</label>
+          <input type="text" class="form" name="surname" formControlName="surname">
+          <div class="help-message">
+            <p class="help is-danger" *ngIf="!form.get('surname').valid && form.get('surname').touched">Il campo cognome è obbligatorio</p>
+          </div>
         <label for="gender" class="form-label">Sesso</label>
         <select name="gender"class="form" formControlName="gender">
           <option value="M">Maschio</option>
@@ -38,39 +42,62 @@
 
       <div class="container-input container-tre">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form" placeholder="Inserisci la tua email" name="email" formControlName="email">
+        <input type="email" class="form" name="email" formControlName="email">
         <div class="help-message">
           <p class="help is-danger" *ngIf="form.controls.email.hasError('required') && form.get('email').touched">Il campo email è obbligatorio</p>
           <p class="help is-danger" *ngIf="form.controls['email'].hasError('email') && form.get('email').dirty && form.get('email').touched">Il campo email non contiene una email valida</p>
         </div>
-        <label for="surname" class="form-label">Username</label>
-        <input type="text" class="form" placeholder="Inserisci uno username" name="username" formControlName="username">
+        <label for="password" class="form-label">Password</label>
+          <p-password [toggleMask]="true" class="form" name="password"  formControlName="password" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$">
+               <ng-template pTemplate="header">
+                   <h6>Inserisci una password</h6>
+               </ng-template>
+               <ng-template pTemplate="footer">
+                   <p-divider></p-divider>
+                   <p class="mt-2">Suggerimenti</p>
+                   <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                       <li>Almeno un carattere minuscolo</li>
+                       <li>Almeno un carattere maiuscolo</li>
+                       <li>almeno un numero</li>
+                       <li>almeno un carattere speciale</li>
+                       <li>La password deve essere lunga dagli 8 ai 16 caratteri</li>
+                   </ul>
+               </ng-template>
+           </p-password>
         <div class="help-message">
-          <p class="help is-danger" *ngIf="!form.get('username').valid && form.get('username').touched">Il campo username è obbligatorio</p>
+          <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('password').dirty && form.get('password').touched"> Il campo password è obbligatorio</p>
         </div>
       </div>
 
       <div class="container-input container-quattro">
-        <label for="password" class="form-label">Password</label>
-        <!-- <input type="password" class="form" placeholder="Password" name="password" formControlName="password"> -->
-        <p-password [toggleMask]="true" [feedback]="false" class="form" placeholder="Password" name="password"  formControlName="password" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$"></p-password>
+        <label for="surname" class="form-label">Username</label>
+        <input type="text" class="form" name="username" formControlName="username">
         <div class="help-message">
-          <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('password').dirty && form.get('password').touched"> Il campo password è obbligatorio</p>
-          <p class="help is-danger" *ngIf="form.controls.password.hasError('pattern')"> Il campo password deve contenere almeno un carattere speciale,una minuscola, una maiuscola e un numero e deve essere lungo da 8 a 16 caratteri</p>
+          <p class="help is-danger" *ngIf="!form.get('username').valid && form.get('username').touched">Il campo username è obbligatorio</p>
         </div>
           <label for="reapetPassword" class="form-label">Ripeti la password</label>
-        <input type="text" class="form" placeholder="Ripeti la password" name="repeatPassword" formControlName="ripetiPassword">
+        <p-password [toggleMask]="true" [feedback]="false" class="form" name="ripetiPassword"  formControlName="ripetiPassword"></p-password>
         <div class="help-message">
-          <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('ripetiPassword').dirty && form.get('ripetiPassword').touched"> Il campo password è obbligatorio</p>
-          <p class="help is-danger" *ngIf="!form.get('ripetiPassword').valid && form.get('ripetiPassword').dirty"> La password deve essere lunga almeno 6 caratteri</p>
+          <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('ripetiPassword').dirty && form.get('ripetiPassword').touched"> Il campo ripeti password è obbligatorio</p>
+          <p class="help is-danger" *ngIf="form.getError('diversa') && form.get('ripetiPassword').touched">Attenzione, le due password non coincidono</p>
         </div>
       </div>
 
       <br>
 
-      <button type="submit" class="registration-button">Registrati</button>
+      <label for="service" class="form-service">
+        Accetto tutte le condizioni nei <a href="#!">termini di servizio</a>
+      </label>
+      <p-checkbox [(ngModel)]="checked" [binary]="true" inputId="binary" formControlName="service"></p-checkbox>
+      <div class="help-message">
+        <p class="help is-danger" *ngIf="!form.get('service').valid && form.get('service').touched">E' necessario accettare i termini di servizio per proseguire</p>
+      </div>
+
+
+      <button type="submit" class="registration-button" [disabled]="!form.valid">Registrati</button>
 
     </form>
+  </div>
 
 </div>
 

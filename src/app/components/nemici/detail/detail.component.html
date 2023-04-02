@@ -1,19 +1,22 @@
-<div class="detail-container">
-  <div class="container-nome">
-    <h3 class="detail-nome">{{nemico.nome}}</h3>
-  </div>
-  <div class="container-flex">
-    <div class="container-immagine">
-      <!-- <img class="detail-image" src="{{nemico.immagine}}"> -->
-      <p-image class="detail-image" src="{{nemico.immagine}}" [preview]="true"></p-image>
-    </div>
-    <div class="container-dettagli">
-      <h3 class="detail-identita">Descrizione</h3>
-      <p class="detail">{{nemico.descrizione}}</p>
-      <h3 class="detail-identita">Area</h3>
-      <p class="detail">{{nemico.area}}</p>
-      <h3 class="detail-identita">Debolezza</h3>
-      <p class="detail">{{nemico.debolezza}}</p>
-    </div>
-  </div>
+<div class="foto-sfondo">
+
+<div class="container-nome">
+  <h3 class="detail-nome">{{nemico.nome}}</h3>
 </div>
+<div class="container">
+  <div class="container-immagine">
+    <img class="detail-image" src="{{nemico.immagine}}">
+  </div>
+   <div class="container-dettagli">
+      <h3 class="detail-identita">Descrizione</h3>
+       <p class="detail">{{nemico.descrizione}}</p>
+      <h3 class="detail-identita">Habitat</h3>
+      <p class="detail-area">{{nemico.area}}</p>
+      <h3 class="detail-identita">Debolezza</h3>
+      <p class="detail-debolezza">{{nemico.debolezza}}</p>
+    </div>
+</div>
+
+
+
+

@@ -3,11 +3,23 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+
+.card-form{
+  border: 5px solid #9B3814;
+  width:55%;
+  margin-left: 22.5%;
+  padding-top: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.705);
 }
 
 .container-form{
   // text-align: center;
-  background-color: rgba(0, 0, 0, 0.705);
+  //  background-color: rgba(0, 0, 0, 0.705);
 
   h2{
     font-size: 50px;
@@ -17,11 +29,36 @@
     padding-top: 20px;
     padding-bottom: 10px;
     text-align: center;
+    text-shadow: black 2px 3px 3px;
+
+  }
+
+  h5{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: #9B3814;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: black 2px 3px 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  i {
+    font-size: 25px;
+    font-family: 'Cinzel Decorative', cursive;
+    color: #9B3814;
+    font-weight: bold;
+    text-shadow: black 2px 3px 3px;
+  }
+
+  .the{
+    font-size: 17px;
   }
 
   .container-uno {
       float:left;
-      margin-left: 25%;
+      margin-left: 1.5%;
       margin-right: 50px;
   }
 
@@ -36,7 +73,7 @@
 
   .container-tre {
     float: left;
-    margin-left: 25%;
+    margin-left: 1.5%;
     margin-right: 50px;
   }
 
@@ -68,24 +105,44 @@
   }
 
   .registration-button{
-    padding:10px;
-    background-color: #9B3814;
-    color: white;
-    border: none;
-    margin: 20px 795px;
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
     font-weight: bold;
-    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0px 1px 1px #000;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 0px #000;
+    transition: all 0.1s ease-in-out;
+    margin: 20px 377px;
+    font-family: 'Cinzel Decorative', cursive;
   }
+
+  .registration-button {
+    background-color: #9B3814;
+    box-shadow: 0px 2px 0px #6A1B09;
+    transform: translateY(-2px);
+  }
+
+  .registration-button:active {
+    background-color: #6A1B09;
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
 }
 
-
-
-
-
-
-
+.form-service {
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+      text-shadow: black 2px 3px 3px;
+      padding-left: 280px;
+      padding-right: 10px;
+}
 
 input.ng-invalid.ng-touched{
   border: 2px solid red;
@@ -101,6 +158,21 @@ select.ng-invalid.ng-touched{
 
 select.ng-valid.ng-touched{
   border: 2px solid rgb(7, 216, 7);
+}
+
+p-password.ng-invalid.ng-dirty{
+  border: 2px solid red;
+}
+p-password.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+p-password.ng-valid.ng-dirty {
+  border: 2px solid green;
+}
+
+p-password.ng-valid.ng-touched {
+  border: 2px solid green;
 }
 
 .help-message{

@@ -1,3 +1,11 @@
+.foto-sfondo{
+  background-image: url("../../../../assets/images/sfondo-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 1px;
+}
+
 .detail-nome {
   color: #9B3814;
   font-family: 'Cinzel Decorative', cursive;
@@ -5,42 +13,118 @@
   margin-top: 20px;
   text-align: center;
   font-weight: bold;
+  text-shadow: black 2px 3px 3px;
 }
 
-.container-flex{
+.container {
+  border: 5px solid black;
   display: flex;
-  margin: 0 50px 50px 50px;
-  border: 10px solid black;
-  padding: 10px;
-  border-radius: 30px;
+  margin: 20px 185px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.705);
 
-.container-immagine{
 
-.detail-image {
-  height:100%;
-  width:300px;
-  background-size: cover;
-  border-radius: 30px;
+.container-immagine {
+  float: left;
+  width: 30%;
+  height: 100%;
+
+
+  img.detail-image {
+    width: 100%;
+    height: 550px;
+    border-radius: 25px;
+    padding: 10px;
 }
 
 }
 
-.detail-identita{
-  color: #9B3814;
-  font-family: 'Cinzel Decorative', cursive;
-  font-size: 25px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-  font-weight: bold;
-}
+.container-dettagli {
+  float: left;
+  width: 70%;
+  padding: 25px;
 
-.detail{
-  text-align: center;
-  margin: 0 100px 0 100px;
+  .detail-identita{
+      color: #9B3814;
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 30px;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: black 2px 3px 3px;
+    }
+
+    .detail{
+  text-align: justify;
+  margin: 0 50px 0 50px;
   font-size: 20px;
   padding: 10px;
   font-family: 'Raleway', sans-serif;
+  color: white;
 }
 
+  .detail-area {
+    text-align: center;
+    margin: 0 50px 0 50px;
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+  }
+  .detail-debolezza{
+    text-align: center;
+    margin: 0 50px 0 50px;
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+  }
 }
+}
+
+// .container{
+//   margin: 0 10% 50px 10%;
+//   border: 10px solid black;
+//   padding: 10px;
+//   border-radius: 30px;
+
+// }
+
+// .container-image {
+//   width: 30%;
+//   height: 100%;
+//   float:left;
+
+// .detail-image {
+// height:100%;
+// background-size: cover;
+// border-radius: 30px;
+// }
+
+// }
+
+// .container-detail {
+
+//   float: left;
+//   width: 40%;
+
+// .detail-identita{
+//   color: #9B3814;
+//   font-family: 'Cinzel Decorative', cursive;
+//   font-size: 25px;
+//   margin-top: 20px;
+//   margin-bottom: 20px;
+//   text-align: center;
+//   font-weight: bold;
+// }
+
+// .detail{
+//   text-align: center;
+//   margin: 0 100px 0 100px;
+//   font-size: 20px;
+//   padding: 10px;
+//   font-family: 'Raleway', sans-serif;
+// }
+
+// }
+

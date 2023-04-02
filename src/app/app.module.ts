@@ -8,7 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
-import { ImageModule } from 'primeng/image';
+import { CheckboxModule } from 'primeng/checkbox';
 import { HeaderComponent } from './components/header/header.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { HomeComponent } from './components/home/home.component';
@@ -42,7 +42,7 @@ import { RegistrazioneComponent } from './users/registrazione/registrazione.comp
     ReactiveFormsModule,
     PasswordModule,
     DividerModule,
-    ImageModule
+    CheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

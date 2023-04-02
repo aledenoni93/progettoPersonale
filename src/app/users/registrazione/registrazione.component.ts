@@ -10,6 +10,8 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class RegistrazioneComponent implements OnInit {
 
+  checked: boolean;
+
   constructor(private config: PrimeNGConfig) {}
   ngOnInit() {
       this.config.setTranslation({
@@ -27,7 +29,8 @@ export class RegistrazioneComponent implements OnInit {
     email: new FormControl('', [Validators.required,Validators.email]),
     username: new FormControl('', Validators.required),
     password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/)]),
-    ripetiPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
+    ripetiPassword: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    service: new FormControl('', Validators.requiredTrue)
   },
   [CustomValidator.MatchValidator('password', 'ripetiPassword')]
   );
