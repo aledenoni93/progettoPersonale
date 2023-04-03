@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CustomValidator } from '../customValidator';
 import { PrimeNGConfig } from 'primeng/api';
+import { UserService } from 'src/app/service/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registrazione',
@@ -12,7 +14,12 @@ export class RegistrazioneComponent implements OnInit {
 
   checked: boolean;
 
-  constructor(private config: PrimeNGConfig) {}
+  constructor(
+    private config: PrimeNGConfig,
+    private userService: UserService,
+    private router: Router
+    ) {}
+
   ngOnInit() {
       this.config.setTranslation({
            weak: 'povera',
@@ -36,6 +43,15 @@ export class RegistrazioneComponent implements OnInit {
   );
 
   onSubmit(){
-    console.log(this.form.value);
+    //console.log(this.form.value);
+
+    const user = {
+      name: this.form.value.name,
+      email: this.form.value.email
+    }
+
+    this.userService.datiUtente.next(user);
+
+    this.router.navigate(['home']);
   }
 }
