@@ -31,29 +31,18 @@ export class HomeComponent implements OnInit {
         console.log(error);
       }
     })
+    this.prendiDatiUtente();
   }
 
   prendiDatiUtente(){
     this.userService.datiUtente.subscribe((res: any) => {
-      localStorage.setItem('name', res.name);
-      localStorage.setItem('email', res.email);
-      localStorage.setItem('username', res.username)
+      this.name = res.name;
+      this.email = res.email;
+      this.username= res.username;
   });
-
-  if(localStorage.getItem("name")){
-    this.name = localStorage.getItem("name");
-    this.email = localStorage.getItem("email");
-    this.username = localStorage.getItem("username")
-  }
   }
 
   closeModal(){
-    localStorage.removeItem("name");
-    localStorage.removeItem("email");
-    localStorage.removeItem("username");
-
-
-
     this.name= "";
     this.email= "";
     this.username= "";

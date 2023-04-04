@@ -69,14 +69,16 @@ div#container-utente {
   div#dati-utente {
     background: white;
     width: 60%;
-    height: 250px;
+    height: 310px;
     border: 5px solid #9B3814;
     border-radius: 30px;
     padding: 16px;
 
     h2 {
-      font-size: 23px!important;
+      font-size: 28px!important;
       text-align: center;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
     }
 
     ul {
@@ -88,9 +90,36 @@ div#container-utente {
       }
     }
 
-    button.btn.btn-primary.btn-lg {
-      width: 50%;
-      margin-left: 25%;
-    }
+    .close-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 0px 1px 1px #000;
+      background-color: #333;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 4px 0px #000;
+      transition: all 0.1s ease-in-out;
+      margin: 20px 377px;
+      font-family: 'Cinzel Decorative', cursive;
+      width: 13%;
+      margin-left: 44%;
+  }
+
+  .close-button {
+    background-color: #9B3814;
+    box-shadow: 0px 2px 0px #6A1B09;
+    transform: translateY(-2px);
+  }
+
+  .close-button:active {
+    background-color: #6A1B09;
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
   }
 }

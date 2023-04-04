@@ -4,6 +4,7 @@ import { CustomValidator } from '../customValidator';
 import { PrimeNGConfig } from 'primeng/api';
 import { UserService } from 'src/app/service/user.service';
 import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-registrazione',
@@ -17,7 +18,8 @@ export class RegistrazioneComponent implements OnInit {
   constructor(
     private config: PrimeNGConfig,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private modalService: NgbModal
     ) {}
 
   ngOnInit() {
@@ -47,11 +49,22 @@ export class RegistrazioneComponent implements OnInit {
 
     const user = {
       name: this.form.value.name,
-      email: this.form.value.email
+      email: this.form.value.email,
+      username: this.form.value.username
     }
 
     this.userService.datiUtente.next(user);
 
     this.router.navigate(['home']);
   }
+
+  openModal(content: any, titolo?: string){ //content è sempre obbligatorio
+    let title = titolo;
+
+    this.modalService.open(content, {ariaLabelledBy: 'modale servizi', size: 'lg', centered: true}).result.then((res) => {
+      console.log('azione da eseguire' + titolo)
+    }).catch((res) => {
+      console.log('nessuna azione da eseguire')
+    })
+}
 }

@@ -12,7 +12,7 @@
 
   <div>
     <h2 class="schede-nemici">Le descrizioni dei nemici</h2>
-    <app-nemico-card [nemici]="nemici" ></app-nemico-card>
+    <app-nemico-card [pag]="'home'" ></app-nemico-card>
 
   </div>
 </div>
@@ -20,13 +20,12 @@
 <ng-template [ngIf]="name">
   <div id="container-utente">
     <div id="dati-utente">
-        <h2>Grazie {{name}} per esserti registrato, ecco i tuoi dati</h2>
+        <h2> {{name}}, siamo lieti di darti il benvenuto tra le creature di cenere, di seguito i tuoi dati di accesso.</h2>
         <ul>
-          <li>Nome: {{name}}</li>
           <li>Email: {{email}}</li>
           <li>Username: {{username}}</li>
         </ul>
-        <button class ="btn btn-primary btn-lg" (click)="closeModal()">Chiudi</button>
+        <button class ="close-button" (click)="closeModal()">Chiudi</button>
     </div>
   </div>
 </ng-template>
