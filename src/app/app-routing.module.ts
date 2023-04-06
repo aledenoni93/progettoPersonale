@@ -1,4 +1,3 @@
-import { RegistrazioneComponent } from './users/registrazione/registrazione.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -6,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NemiciComponent } from './components/nemici/nemici.component';
 import { NemiciListComponent } from './components/nemici/nemici-list/nemici-list.component';
 import { DetailComponent } from './components/nemici/detail/detail.component';
+import { RegistrazioneComponent } from './users/registrazione/registrazione.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},

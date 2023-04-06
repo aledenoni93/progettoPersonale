@@ -9,7 +9,6 @@ export const NEMICI : Nemico[] = [
     debolezza: "Spadone massacra vuoti, tutti gli status alterati",
     immagine: "../../assets/images/custode-di-tombe.jpg",
     data: "24/03/2023",
-    pubblicato: true
   },
   {
     _id: 2,
@@ -19,7 +18,7 @@ export const NEMICI : Nemico[] = [
     debolezza: "Tutti gli status alterati",
     immagine: "../../assets/images/lucertola-di-cristallo-vorace.jpg",
     data: "24/03/2023",
-    pubblicato: true
+
   },
   {
     _id: 3,
@@ -29,7 +28,7 @@ export const NEMICI : Nemico[] = [
     debolezza: "Spadone massacra vuoti, fuoco, tutti gli status alterati",
     immagine: "../../assets/images/cane-famelico.jpg",
     data: "24/03/2023",
-    pubblicato: true
+
   },
   {
     _id: 4,
@@ -39,7 +38,7 @@ export const NEMICI : Nemico[] = [
     debolezza: "Fuoco, armi contundenti",
     immagine: "../../assets/images/lucertola-di-cristallo.jpg",
     data: "24/03/2023",
-    pubblicato: true
+
   },
   {
     _id: 5,
@@ -49,7 +48,7 @@ export const NEMICI : Nemico[] = [
     debolezza: "Spadone massacra vuoti, tutti gli status alterati",
     immagine: "../../assets/images/cavaliere-vuoto.jpg",
     data: "24/03/2023",
-    pubblicato: true
+
   },
   {
     _id: 6,
@@ -59,7 +58,7 @@ export const NEMICI : Nemico[] = [
     debolezza: "Fede, ghiaccio, fulmine",
     immagine: "../../assets/images/viverna-di-lothric.jpg",
     data: "24/03/2023",
-    pubblicato: true
+
   },
   {
     _id: 7,
@@ -69,7 +68,7 @@ export const NEMICI : Nemico[] = [
     debolezza: "Armi da taglio, fuoco",
     immagine: "../../assets/images/ratto.jpg",
     data: "24/03/2023",
-    pubblicato: true
+
   },
   {
     _id: 8,
@@ -79,7 +78,8 @@ export const NEMICI : Nemico[] = [
     debolezza: "Armi del cavaliere nero, Oscurità",
     immagine: "../../assets/images/demone.jpg",
     data: "24/03/2023",
-    pubblicato: true
+
+
   },
   {
     _id: 9,
@@ -89,7 +89,8 @@ export const NEMICI : Nemico[] = [
     debolezza: "Sanguinamento, fuoco, oscurità",
     immagine: "../../assets/images/Licantropo.jpg",
     data: "24/03/2023",
-    pubblicato: true
+
+
   },
   {
     _id: 10,
@@ -99,7 +100,7 @@ export const NEMICI : Nemico[] = [
     debolezza: "Fuoco",
     immagine: "../../assets/images/cacciatore-di-licantropi.jpg",
     data: "24/03/2023",
-    pubblicato: true
+
   },
   {
     _id: 11,
@@ -109,7 +110,7 @@ export const NEMICI : Nemico[] = [
     debolezza: "Oscurità,ghiaccio,veleno",
     immagine: "../../assets/images/cavaliere-nero.jpg",
     data: "24/03/2023",
-    pubblicato: true
+
   },
   {
     _id: 12,
@@ -119,6 +120,6 @@ export const NEMICI : Nemico[] = [
     debolezza: "Fuoco",
     immagine: "../../assets/images/verme-cadavere.jpg",
     data: "24/03/2023",
-    pubblicato: true
+
   },
 ]

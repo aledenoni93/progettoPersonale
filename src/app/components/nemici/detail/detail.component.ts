@@ -24,7 +24,7 @@ export class DetailComponent implements OnInit{
 
 
   onGetNemico(): void {
-    const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));
+    const id = this.activatedRoute.snapshot.paramMap.get('_id');
 
     this.nemicoService.getNemico(id).subscribe({
       next: (res) => {

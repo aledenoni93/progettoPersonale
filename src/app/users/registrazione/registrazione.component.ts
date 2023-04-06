@@ -5,6 +5,7 @@ import { PrimeNGConfig } from 'primeng/api';
 import { UserService } from 'src/app/service/user.service';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-registrazione',
@@ -12,6 +13,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./registrazione.component.scss']
 })
 export class RegistrazioneComponent implements OnInit {
+
+  userInserito: any;
 
   checked: boolean;
 
@@ -44,19 +47,22 @@ export class RegistrazioneComponent implements OnInit {
   [CustomValidator.MatchValidator('password', 'ripetiPassword')]
   );
 
-  onSubmit(){
+  aggiungiUser(){
     //console.log(this.form.value);
-
-    const user = {
-      name: this.form.value.name,
-      email: this.form.value.email,
-      username: this.form.value.username
-    }
-
+    const user = this.form.value
+    this.userService.insertUser(user).pipe(take(1)).subscribe({
+      next: (res) => {
+        console.log('response is ', res)
+        this.userInserito = res;
+      },
+      error: (err) =>{
+        console.log(err)
+      }
+    })
     this.userService.datiUtente.next(user);
-
     this.router.navigate(['home']);
   }
+
 
   openModal(content: any, titolo?: string){ //content è sempre obbligatorio
     let title = titolo;

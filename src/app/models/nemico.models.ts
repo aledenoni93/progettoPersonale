@@ -6,5 +6,4 @@ export interface Nemico{
   debolezza: string;
   immagine: string;
   data: string;
-  pubblicato: boolean;
 }
