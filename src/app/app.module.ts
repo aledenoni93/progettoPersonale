@@ -20,6 +20,7 @@ import { NemicoCardComponent } from './shared/nemico-card/nemico-card.component'
 import { NemiciListComponent } from './components/nemici/nemici-list/nemici-list.component';
 import { DetailComponent } from './components/nemici/detail/detail.component';
 import { RegistrazioneComponent } from './users/registrazione/registrazione.component';
+import { AggiungiNemicoComponent } from './components/nemici/aggiungi-nemico/aggiungi-nemico.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { RegistrazioneComponent } from './users/registrazione/registrazione.comp
     NemiciListComponent,
     DetailComponent,
     RegistrazioneComponent,
+    AggiungiNemicoComponent,
   ],
   imports: [
     BrowserModule,

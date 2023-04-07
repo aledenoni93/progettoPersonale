@@ -1,0 +1,48 @@
+<!-- <div class="foto-nuovonemico"> -->
+
+<div class="container-form">
+  <div class="card-form">
+    <div class="container">
+      <h5>Inserisci un nuovo nemico</h5>
+      <form class="form" [formGroup]="form" (ngSubmit)="aggiungiNemico()">
+        <div class="container-input">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form"  formControlName="nome">
+          <label for="Descrizione" class="form-label">Descrizione</label>
+          <textarea type="text-area" cols="30" rows="5" class="form-text"  formControlName="descrizione"></textarea>
+          <label for="Area" class="form-label">Area</label>
+          <input type="text" class="form"  formControlName="area">
+          <label for="Debolezza" class="form-label">Debolezza</label>
+          <input type="text" class="form"  formControlName="debolezza">
+          <label for="immagine" class="form-label">Immagine</label>
+          <input type="url" class="form"  formControlName="immagine">
+          <button type="submit" class="insert-button" [disabled]="!form.valid">Inserisci</button>
+        </div>
+      </form>
+    </div>
+    <div class="foto-nuovonemico"></div>
+  </div>
+</div>
+
+<ng-template [ngIf]="nemicoInserito" let-modal>
+  <div id="container-nemico">
+    <div id="dati-nemico">
+      <h2>Nuovo nemico aggiunto con successo, ecco il riepilogo</h2>
+      <div class="testo-riepilogo">
+        <ul>
+          <li><strong>Nome:</strong>{{nemicoInserito.nome}}</li>
+          <li><strong>Descrizione:</strong>{{nemicoInserito.descrizione | slice: 0:200}} ...</li>
+          <li><strong>Area:</strong>{{nemicoInserito.area}}</li>
+          <li><strong>Debolezze:</strong>{{nemicoInserito.debolezza}}</li>
+        </ul>
+      </div>
+      <div class="foto-riepilogo">
+        <img [src]="nemicoInserito.image" class="immagine-nemico">
+      </div>
+      <div class="button-footer">
+        <button type="button" class="close-button" (click)="closeModal()">Chiudi</button>
+        <button type="button" class="close-button" (click)="onNewEnemy()" ngbAutoFocus>Nuovo Nemico</button>
+      </div>
+    </div>
+  </div>
+</ng-template>

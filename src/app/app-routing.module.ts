@@ -6,12 +6,14 @@ import { NemiciComponent } from './components/nemici/nemici.component';
 import { NemiciListComponent } from './components/nemici/nemici-list/nemici-list.component';
 import { DetailComponent } from './components/nemici/detail/detail.component';
 import { RegistrazioneComponent } from './users/registrazione/registrazione.component';
+import { AggiungiNemicoComponent } from './components/nemici/aggiungi-nemico/aggiungi-nemico.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'nemici', component: NemiciComponent, children: [
     {path: 'dettaglio/:nome/:_id', component: DetailComponent},
+    {path: 'aggiungi-nemico', component: AggiungiNemicoComponent},
     {path: '', pathMatch: 'full', component: NemiciListComponent}
   ]},
   {path: 'registrazione', component: RegistrazioneComponent},
