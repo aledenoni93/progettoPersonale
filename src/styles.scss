@@ -118,6 +118,32 @@ p.titolo-paginatore {
   box-shadow: 0 0 0 0.2rem #9B3814 !important;
 }
 
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+
+  p.titolo-paginatore {
+    font-size: 18px;
+    margin-left:2%;
+  }
+
+ }
+
+ @media only screen and (min-width: 481px) and (max-width: 768px) {
+
+  p.titolo-paginatore {
+    font-size: 18px;
+    margin-left: 15%;
+  }
+
+ }
+
+ @media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+  p.titolo-paginatore {
+    font-size: 18px;
+    margin-left: 20%;
+  }
+ }
+
 
 
 

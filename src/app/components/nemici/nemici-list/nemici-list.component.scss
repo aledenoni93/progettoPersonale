@@ -27,3 +27,11 @@ h2 {
   padding: 20px !important;
   border-radius: 10px !important;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .paragrafo{
+    font-size: 20px;
+    margin: 40px;
+    line-height: 1.2;
+ }
+}

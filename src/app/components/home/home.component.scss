@@ -123,3 +123,29 @@ div#container-utente {
 
   }
 }
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+
+  .container-titolo h2{
+    font-size: 45px !important;
+    line-height: 1 !important;
+  }
+
+  .schede-nemici {
+    font-size: 45px;
+    line-height: 1;
+  }
+  }
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    .container-titolo h2{
+      font-size: 63px !important;
+      line-height: 1 !important;
+    }
+
+    .schede-nemici {
+      font-size: 58px;
+      line-height: 1;
+    }
+    }

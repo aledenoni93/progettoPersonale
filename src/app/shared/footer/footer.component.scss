@@ -72,6 +72,34 @@
 
 }
 
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .container-flex {
+    flex-direction: column;
+ }
 
+ h5 {
+  text-align: center;
+}
 
+ol, ul, dl {
+  margin-left: 34%;
+}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .container-flex {
+    flex-direction: column;
+ }
+
+ h5 {
+  text-align: center;
+}
+
+ol, ul, dl {
+  margin-left: 39%;
+}
+  li {
+    padding-top: 10px;
+  }
+}
 
