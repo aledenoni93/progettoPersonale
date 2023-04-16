@@ -17,26 +17,34 @@
             <li class="nav-item">
               <a class="nav-link testo" routerLink="nemici">Nemici</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="authService.isLogged()">
               <a class="nav-link testo" routerLink="/nemici/aggiungi-nemico">Aggiungi nemico</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link testo" href="#">Aree</a>
+              <a class="nav-link testo" routerLink="aree">Aree</a>
+            </li>
+            <li class="nav-item" *ngIf="authService.isLogged()" >
+              <a class="nav-link testo" routerLink="/aree/aggiungi-area">Aggiungi area</a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link testo" routerLink="equip">Armi e Armature</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link testo" href="#">Armi</a>
+              <a class="nav-link testo" routerLink="contatti">Contatti</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link testo" href="#">Armature</a>
+            <div class="search">
+              <input type="search" class="search-form" placeholder="Ricerca..." [(ngModel)]="ricerca" (keyup.enter)="result()">
+              <button class="search-button" (click)="result()"><mat-icon class="lente">search</mat-icon></button>
+            </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link testo" href="#">Build</a>
+            <li class="nav-item user" *ngIf="!authService.isLogged()">
+              <a class="nav-link testo" routerLink="login">Accedi</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link testo" routerLink="registrazione">Registrati</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link testo" href="#">Contatti</a>
+            <li class="nav-item user" *ngIf="authService.isLogged()">
+              <span class="name">Ciao {{user.username}}</span>
+              <a class="nav-link testo" routerLink="profile"> - PROFILO</a>
+              <a class="nav-link testo" (click)="logOut()"> - ESCI</a>
             </li>
           </ul>
         </div>

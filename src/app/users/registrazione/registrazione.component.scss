@@ -59,7 +59,7 @@
   .container-uno {
       float:left;
       margin-left: 1.5%;
-      margin-right: 50px;
+      margin-right: 5%;
   }
 
   .container-due {
@@ -74,7 +74,7 @@
   .container-tre {
     float: left;
     margin-left: 1.5%;
-    margin-right: 50px;
+    margin-right: 5%;
   }
 
   .container-quattro {
@@ -189,6 +189,183 @@ p.help.is-danger{
   font-size: 12px;
   font-weight: 600;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+
+  .foto-registrazione {
+    background-image: none;
+  }
+
+  .laptop {
+    display: none;
+  }
+
+  .card-form{
+    width:90%;
+    margin-left: 5%;
+  }
+
+  .container-form{
+
+    .container-input{
+
+      .form-label{
+       margin-left: 5%;
+      }
+
+      input{
+        width: 90%;
+        margin-left: 5%;
+      }
+
+      select{
+        width:  90%;
+        margin-left: 5%;
+      }
+
+    }
+  }
+
+    .form-service {
+
+    font-size: 11px;
+    padding-left: 3px;
+    padding-right: 0px;
+  }
+
+  .container-form .registration-button{
+    margin: 20px 50px;
+  }
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 425px) {
+
+  .laptop {
+    display: none;
+  }
+
+  .foto-registrazione {
+    background-image: none;
+  }
+
+  .laptop {
+    display: none;
+  }
+
+  .card-form{
+    width:90%;
+    margin-left: 5%;
+  }
+
+  .container-form{
+
+    .container-input{
+
+      .form-label{
+       margin-left: 5%;
+      }
+
+      input{
+        width: 90%;
+        margin-left: 5%;
+      }
+
+      select{
+        width:  90%;
+        margin-left: 5%;
+      }
+
+    }
+  }
+
+    .form-service {
+
+    font-size: 14px;
+    padding-left: 3px;
+    padding-right: 10px;
+  }
+
+  .container-form .registration-button{
+    margin: 20px 85px;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+
+  .laptop {
+    display: none;
+  }
+
+  .foto-registrazione {
+    background-image: none;
+  }
+
+  .laptop {
+    display: none;
+  }
+
+  .card-form{
+    width:90%;
+    margin-left: 5%;
+  }
+
+  .container-form{
+
+    .container-input{
+
+      .form-label{
+       margin-left: 5%;
+      }
+
+      input{
+        width: 90%;
+        margin-left: 5%;
+      }
+
+      select{
+        width:  90%;
+        margin-left: 5%;
+      }
+
+    }
+  }
+
+    .form-service {
+
+    font-size: 17px;
+    padding-left: 26px;
+    padding-right: 10px;
+  }
+
+  .container-form .registration-button{
+    margin: 20px 130px;
+  }
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .mobile {
+    display: none;
+  }
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .mobile {
+    display: none;
+  }
+
+
+}
+
 
 
 

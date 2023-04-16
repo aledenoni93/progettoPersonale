@@ -10,10 +10,16 @@ export class UserService {
 
   datiUtente = new ReplaySubject;
   apiBaseUrl = 'api/users';
+  userRole = new ReplaySubject;
 
   constructor( private http: HttpClient) { }
 
   insertUser(user : any): Observable<any> {
     return this.http.post<any>(`${this.apiBaseUrl}/signup`, user);
+  }
+
+  getUser(username: string): Observable<any> {
+    const usernameUtente = {username: username}
+    return this.http.post<any>(`${this.apiBaseUrl}/user`, usernameUtente);
   }
 }

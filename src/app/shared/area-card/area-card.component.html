@@ -1,0 +1,23 @@
+<div class="container-cards">
+  <div class="container-pagination" *ngIf="pag != 'home'">
+    <div>
+      <p class="titolo-paginatore"><strong>{{areePerPagina}}</strong> Aree su un totale di <strong>{{aree.length}}</strong> aree, pagina corrente: <strong>{{page}}</strong></p>
+    </div>
+
+    <p-paginator (onPageChange)="paginate($event)" [rows]="areePerPagina" [totalRecords]="aree.length" (rowsPerPageOptionsChange)="areePerPagina"></p-paginator>
+  </div>
+
+  <div class="card-container" *ngFor="let area of aree | slice: (page * areePerPagina) - areePerPagina : page * areePerPagina">
+    <div class="card">
+      <div class="card-image" [ngStyle]="{'background-image': 'url(' + area.immagine + ')'}"></div>
+      <div class="card-body">
+        <h5 class="card-title">{{area.nome}}</h5>
+        <p class="card-text">
+          <span [innerHTML]="area.descrizione | slice: 0:160"></span>...
+        </p>
+        <a class="btn btn-primary" routerLink="/aree/dettaglio/{{area.nome}}/{{area._id}}">Visualizza</a>
+        <a class="btn btn-primary delete" *ngIf="ruolo === 'admin'">Elimina</a>
+      </div>
+    </div>
+  </div>
+</div>

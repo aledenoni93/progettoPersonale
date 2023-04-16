@@ -1,6 +1,6 @@
 <app-carousel></app-carousel>
 
-<div id="main-container">
+
 
   <div class="container-titolo">
     <h2>Benvenuto su
@@ -10,12 +10,16 @@
     <p class="paragrafo border"><i class = "iniziale">A</i>shen One, benvenuto nel nostro sito dedicato interamente a Dark Souls III. Qui troverai una vasta raccolta di guide su ogni area del gioco, dettagliate schede tecniche dei nemici e le migliori strategie per sconfiggerli, una lista completa di armi e armature disponibili in gioco e consigli preziosi sullo sviluppo del tuo personaggio. Siamo qui per aiutarti a superare ogni sfida che incontrerai lungo il cammino. Preparati ad immergerti nel mondo oscuro di Dark Souls III e a diventare un guerriero esperto.</p>
   </div>
 
-  <div>
-    <h2 class="schede-nemici">Le descrizioni dei nemici</h2>
+  <div id="schede-nemici">
+    <h2 class="titolo-schede">Le schede dei nemici</h2>
     <app-nemico-card [pag]="'home'" ></app-nemico-card>
-
   </div>
-</div>
+
+  <div id="schede-aree">
+    <h2 class="titolo-schede">Le schede delle ambientazioni</h2>
+    <app-area-card [pag]="'home'"></app-area-card>
+  </div>
+
 
 <ng-template [ngIf]="name">
   <div id="container-utente">

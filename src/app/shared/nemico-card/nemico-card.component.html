@@ -12,11 +12,18 @@
       <div class="card-body">
         <h5 class="card-title">{{nemico.nome}}</h5>
         <p class="card-text">
-          {{nemico.descrizione | slice: 0:170}}...
+          <span [innerHTML]="nemico.descrizione| slice: 0:170">...</span>
         </p>
         <a class="btn btn-primary" routerLink="/nemici/dettaglio/{{nemico.nome}}/{{nemico._id}}">Visualizza</a>
+        <a class="btn btn-primary delete" *ngIf="ruolo === 'admin'">Elimina</a>
       </div>
     </div>
   </div>
-
 </div>
+
+<ng-template [ngIf]="loading">
+  <div class="loading">
+    <img class="bonfire" src="../../../assets/images/bonfire.gif">
+    <h2  class="text-loading">Loading...</h2>
+  </div>
+</ng-template>

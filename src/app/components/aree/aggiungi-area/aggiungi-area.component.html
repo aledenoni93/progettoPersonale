@@ -1,0 +1,53 @@
+<div class="container-form">
+  <div class="card-form">
+    <div class="container">
+      <h5>Inserisci un nuova area</h5>
+      <form class="form" [formGroup]="form" (ngSubmit)="aggiungiArea()">
+        <div class="container-input">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form"  formControlName="nome">
+          <label for="Descrizione" class="form-label">Descrizione</label>
+          <ckeditor [editor]="Editor" [config]="editorConfig" class="descrizione" formControlName="descrizione"></ckeditor>
+          <label for="Walkthrough" class="form-label">Walkthrough</label>
+          <input type="text" class="form"  formControlName="walkthrough">
+          <label for="AreaPrecedente" class="form-label">Area Precedente</label>
+          <input type="text" class="form"  formControlName="areaPrecedente">
+          <label for="AreaSuccessiva" class="form-label">Area Successiva</label>
+          <input type="text" class="form"  formControlName="areaSuccessiva">
+          <label for="immagine" class="form-label">Immagine</label>
+          <input type="url" class="form"  formControlName="immagine">
+          <label for="immagineMappa" class="form-label">Immagine Mappa</label>
+          <input type="url" class="form"  formControlName="immagineMappa">
+          <button type="submit" class="insert-button" [disabled]="!form.valid">Inserisci</button>
+        </div>
+      </form>
+    </div>
+    <div class="foto-nuovaarea"></div>
+  </div>
+</div>
+
+<p-toast position="bottom-right"></p-toast>
+
+<ng-template [ngIf]="areaInserita" let-modal>
+  <div id="container-area">
+    <div id="dati-area">
+      <h2>Nuovo nemico aggiunto con successo, ecco il riepilogo</h2>
+      <div class="testo-riepilogo">
+        <ul>
+          <li><strong>Nome:</strong>{{areaInserita.nome}}</li>
+          <li><strong>Descrizione:</strong><span [innerHTML]="areaInserita.descrizione | slice: 0:170">...</span></li>
+          <li><strong>Walkthrough</strong><span [innerHTML]="areaInserita.Walkthrough | slice: 0:170">...</span></li>
+          <li><strong>Area precedente:</strong>{{areaInserita.areaPrecedente}}</li>
+          <li><strong>Area successiva:</strong>{{areaInserita.areaSuccessiva}}</li>
+        </ul>
+      </div>
+      <div class="foto-riepilogo">
+        <img [src]="areaInserita.immagine" class="immagine-nemico">
+      </div>
+      <div class="button-footer">
+        <button type="button" class="close-button" (click)="closeModal()">Chiudi</button>
+        <button type="button" class="close-button" (click)="onNewArea()" ngbAutoFocus>Nuova area</button>
+      </div>
+    </div>
+  </div>
+</ng-template>

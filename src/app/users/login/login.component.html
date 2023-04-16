@@ -1,0 +1,24 @@
+<div class="foto-sfondo">
+<div class="container">
+  <div class="container-logo">
+    <img src="../../../assets/images/TheSoulsBorneLogo.png" class = "icona-soulsborne">
+      <h2 class="nome-brand"><i class="nome-brand-the">The</i>Ashen Guide</h2>
+  </div>
+  <div class="container-form">
+    <form class="form" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" >
+      <div class="input-form">
+      <input type="text" class="form-login" name="username" placeholder="Username" ngModel/>
+      </div>
+      <div class="input-form">
+      <p-password [toggleMask]="true" [feedback]="false" class="form-login" name="password" placeholder="Password" ngModel></p-password>
+      </div>
+      <div class="button">
+        <button type="submit" class="login-button">Accedi</button>
+      </div>
+      <!-- <div class="alert" *ngIf ="loginError">
+        {{loginError}}
+      </div> -->
+    </form>
+  </div>
+  <h5 class="text-reg">Se non sei ancora registrato,<a class="link-registrazione" routerLink="/registrazione">Registrati!</a></h5>
+</div>

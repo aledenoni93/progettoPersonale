@@ -1,6 +1,6 @@
 <div class="foto-registrazione">
 
-<div class="container-form">
+<div class="container-form laptop">
   <div class="card-form">
     <!-- <h2>Registrati</h2> -->
     <h5>UNISCITI ALLA COMMUNITY DI <i class="the">The</i><i> Ashen guide!</i></h5>
@@ -85,20 +85,100 @@
 
       <br>
 
-      <!-- <div class="accordion" id="accordionTermini">
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#terminiServizio" aria-expanded="false" aria-controls="terminiServizio">
-              Visualizza i termini di servizio
-            </button>
-          </h3>
-          <div id="terminiServizio" class="accordion-collapse collapse" data-bs-parent="#accordionTermini">
-            <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
+      <label for="service" class="form-service">
+        Accetto tutte le condizioni nei <a (click)="openModal(modaleServizi)">termini di servizio</a>
+      </label>
+      <p-checkbox [(ngModel)]="checked" [binary]="true" inputId="binary" formControlName="service"></p-checkbox>
+      <div class="help-message">
+        <p class="help is-danger" *ngIf="!form.get('service').valid && form.get('service').touched">E' necessario accettare i termini di servizio per proseguire</p>
+      </div>
+
+
+      <button type="submit" class="registration-button" [disabled]="!form.valid">Registrati</button>
+
+    </form>
+  </div>
+
+</div>
+
+
+<div class="container-form mobile">
+  <div class="card-form">
+    <h5>UNISCITI ALLA COMMUNITY DI <i class="the">The</i><i> Ashen guide!</i></h5>
+    <h5>Registrati per contribuire alla biblioteca di conoscenze su Dark Souls III</h5>
+    <h5>e condividere le tue esperienze con altre creature della cenere.</h5>
+    <form class="form" [formGroup]="form" (ngSubmit)="aggiungiUser()">
+
+      <div class="container-input">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" class="form" name="name" formControlName="name">
+          <div class="help-message">
+            <p class="help is-danger" *ngIf="!form.get('name').valid && form.get('name').touched">Il campo nome è obbligatorio</p>
           </div>
+
+          <label for="surname" class="form-label">Cognome</label>
+          <input type="text" class="form" name="surname" formControlName="surname">
+          <div class="help-message">
+            <p class="help is-danger" *ngIf="!form.get('surname').valid && form.get('surname').touched">Il campo cognome è obbligatorio</p>
+          </div>
+
+          <label for="birthdate" class="form-label">Data di nascita</label>
+          <input type="date" class="form" name="birthdate" formControlName="birthdate">
+          <div class="help-message">
+            <p class="help is-danger" *ngIf="!form.get('birthdate').valid && form.get('birthdate').touched">Il campo data è obbligatorio</p>
+          </div>
+
+        <label for="gender" class="form-label">Sesso</label>
+        <select name="gender"class="form" formControlName="gender">
+          <option value="M">Maschio</option>
+          <option value="F">Femmina</option>
+          <option value="Altro">Altro</option>
+        </select>
+        <div class="help-message">
+          <p class="help is-danger" *ngIf="!form.get('gender').valid && form.get('gender').touched">Il campo sesso è obbligatorio</p>
         </div>
-      </div> -->
+
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form" name="email" formControlName="email">
+        <div class="help-message">
+          <p class="help is-danger" *ngIf="form.controls.email.hasError('required') && form.get('email').touched">Il campo email è obbligatorio</p>
+          <p class="help is-danger" *ngIf="form.controls['email'].hasError('email') && form.get('email').dirty && form.get('email').touched">Il campo email non contiene una email valida</p>
+        </div>
+
+        <label for="surname" class="form-label">Username</label>
+        <input type="text" class="form" name="username" formControlName="username">
+        <div class="help-message">
+          <p class="help is-danger" *ngIf="!form.get('username').valid && form.get('username').touched">Il campo username è obbligatorio</p>
+        </div>
+
+        <label for="password" class="form-label">Password</label>
+          <p-password [toggleMask]="true" class="form" name="password"  formControlName="password" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$">
+               <ng-template pTemplate="header">
+                   <h6>Inserisci una password</h6>
+               </ng-template>
+               <ng-template pTemplate="footer">
+                   <p-divider></p-divider>
+                   <p class="mt-2">Suggerimenti</p>
+                   <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                       <li>Almeno un carattere minuscolo</li>
+                       <li>Almeno un carattere maiuscolo</li>
+                       <li>almeno un numero</li>
+                       <li>almeno un carattere speciale</li>
+                       <li>La password deve essere lunga dagli 8 ai 16 caratteri</li>
+                   </ul>
+               </ng-template>
+           </p-password>
+        <div class="help-message">
+          <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('password').dirty && form.get('password').touched"> Il campo password è obbligatorio</p>
+        </div>
+
+          <label for="reapetPassword" class="form-label">Ripeti la password</label>
+        <p-password [toggleMask]="true" [feedback]="false" class="form" name="ripetiPassword"  formControlName="ripetiPassword"></p-password>
+        <div class="help-message">
+          <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('ripetiPassword').dirty && form.get('ripetiPassword').touched"> Il campo ripeti password è obbligatorio</p>
+          <p class="help is-danger" *ngIf="form.getError('diversa') && form.get('ripetiPassword').touched">Attenzione, le due password non coincidono</p>
+        </div>
+      </div>
 
       <label for="service" class="form-service">
         Accetto tutte le condizioni nei <a (click)="openModal(modaleServizi)">termini di servizio</a>

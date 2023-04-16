@@ -1,0 +1,264 @@
+.foto-sfondo{
+  background-image: url("../../../assets/images/sfondo-pagina-login.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  padding:1px;
+}
+
+// .container{
+//   background-color: rgba(0, 0, 0, 0.5);
+//   background-size: cover;
+//   background-repeat: repeat;
+//   width: 100%;
+//   padding: 1px;
+// }
+
+.container-logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .nome-brand-the {
+    color: #9B3814;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .nome-brand{
+    color: #9B3814;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.container-form {
+  width: 40%;
+  margin: 2% 31% 1%;
+  border: 5px solid #9B3814;
+  border-radius: 15px;
+
+}
+
+input.form-login {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 40px;
+  padding-left: 6px;
+}
+
+.form-login:focus {
+  border: none;
+  outline: none;
+}
+
+.form-login:hover {
+  border: none;
+}
+
+label.form-label {
+  padding-left: 5%;
+  font-size: 20px;
+  padding-bottom: 5%;
+}
+
+h5.text-reg {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.button {
+  margin-top: 2%;
+  margin-bottom: 3%;
+
+  .login-button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0px 1px 1px #000;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 0px #000;
+    transition: all 0.1s ease-in-out;
+    margin: 20px 180px;
+    font-family: 'Cinzel Decorative', cursive;
+  }
+
+  .login-button {
+    background-color: #9B3814;
+    box-shadow: 0px 2px 0px #6A1B09;
+    transform: translateY(-2px);
+  }
+
+  .login-button:active {
+    background-color: #6A1B09;
+    box-shadow: none;
+    transform: translateY(0);
+  }
+}
+
+h5.text-reg {
+  font-size: 15px;
+  color: white;
+  margin-right: 14%;
+}
+
+a.link-registrazione {
+  text-decoration: none;
+  color: #9B3814;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+
+  .foto-sfondo{
+    background-image: none;
+  }
+
+  .container {
+
+    .container-form {
+      width: 100%;
+      margin: 0%;
+      border: none;
+      border-radius: none;
+
+      input.form-login {
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+
+    .button {
+      .login-button{
+        margin: 5% 29%;
+      }
+
+    }
+
+    .text-reg {
+      font-size: 13px;
+      color: black;
+      margin-right: 0%;
+      text-align: initial;
+  }
+
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 425px){
+
+  .foto-sfondo{
+    background-image: none;
+  }
+
+  .container {
+
+    .container-form {
+      width: 100%;
+      margin: 0%;
+      border: none;
+      border-radius: none;
+
+      input.form-login {
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+
+    .button {
+      .login-button{
+        margin: 5% 29%;
+      }
+    }
+
+    .text-reg {
+      font-size: 13px;
+      color: black;
+      margin-right: 0%;
+      text-align: initial;
+    }
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px){
+
+  .foto-sfondo{
+    background-image: none;
+  }
+
+  .container {
+
+    .container-form {
+      width: 100%;
+      margin: 0%;
+      border: none;
+      border-radius: none;
+
+      input.form-login {
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+
+    .button {
+      .login-button{
+        margin: 5% 37%;
+      }
+    }
+
+    .text-reg {
+      font-size: 13px;
+      color: black;
+      margin-right: 0%;
+      text-align: center;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+  .container {
+
+    .container-form {
+      width: 100%;
+      margin: 0%;
+
+
+      input.form-login {
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+
+    .button {
+      .login-button{
+        margin: 5% 37%;
+      }
+    }
+
+    .text-reg {
+      font-size: 18px;
+      margin-right: 50%;
+    }
+  }
+
+
+}

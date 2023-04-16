@@ -9,7 +9,7 @@
           <label for="nome" class="form-label">Nome</label>
           <input type="text" class="form"  formControlName="nome">
           <label for="Descrizione" class="form-label">Descrizione</label>
-          <textarea type="text-area" cols="30" rows="5" class="form-text"  formControlName="descrizione"></textarea>
+          <ckeditor [editor]="Editor" [config]="editorConfig" class="descrizione" formControlName="descrizione"></ckeditor>
           <label for="Area" class="form-label">Area</label>
           <input type="text" class="form"  formControlName="area">
           <label for="Debolezza" class="form-label">Debolezza</label>
@@ -24,6 +24,8 @@
   </div>
 </div>
 
+<p-toast position="bottom-right"></p-toast>
+
 <ng-template [ngIf]="nemicoInserito" let-modal>
   <div id="container-nemico">
     <div id="dati-nemico">
@@ -31,13 +33,13 @@
       <div class="testo-riepilogo">
         <ul>
           <li><strong>Nome:</strong>{{nemicoInserito.nome}}</li>
-          <li><strong>Descrizione:</strong>{{nemicoInserito.descrizione | slice: 0:200}} ...</li>
+          <li><strong>Descrizione:</strong><span [innerHTML]="nemicoInserito.descrizione| slice: 0:170">...</span></li>
           <li><strong>Area:</strong>{{nemicoInserito.area}}</li>
           <li><strong>Debolezze:</strong>{{nemicoInserito.debolezza}}</li>
         </ul>
       </div>
       <div class="foto-riepilogo">
-        <img [src]="nemicoInserito.image" class="immagine-nemico">
+        <img [src]="nemicoInserito.immagine" class="immagine-nemico">
       </div>
       <div class="button-footer">
         <button type="button" class="close-button" (click)="closeModal()">Chiudi</button>

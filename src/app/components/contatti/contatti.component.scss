@@ -1,0 +1,43 @@
+.titolo {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3%;
+  font-family: 'Cinzel Decorative', cursive;
+  color: #9B3814;
+}
+
+.info {
+  font-size: 20px;
+  margin-left: 40%;
+  margin-top: 3%;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+
+
+     .titolo {
+      font-size: 25px;
+    }
+
+    .info {
+      font-size: 15px;
+      margin-left: 10%;
+    }
+
+
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+
+  .titolo {
+    font-size: 25px;
+  }
+
+  .info {
+    font-size: 15px;
+    margin-left: 10%;
+  }
+
+}

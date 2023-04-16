@@ -4,11 +4,14 @@ import { NemicoService } from 'src/app/service/nemico.service';
 import { Router } from '@angular/router';
 import { take } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { MessageService } from 'primeng/api';
+import * as ClassicEditorBuild from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-aggiungi-nemico',
   templateUrl: './aggiungi-nemico.component.html',
-  styleUrls: ['./aggiungi-nemico.component.scss']
+  styleUrls: ['./aggiungi-nemico.component.scss'],
+  providers: [MessageService]
 })
 export class AggiungiNemicoComponent implements OnInit {
   nemicoInserito: any;
@@ -27,10 +30,50 @@ export class AggiungiNemicoComponent implements OnInit {
       immagine: new FormControl('', Validators.required)
   })
 
+  Editor = ClassicEditorBuild;
+
+  editorConfig = {
+    toolbar: {
+        items: [
+            'bold',
+            'italic',
+            'link',
+            'bulletedList',
+            'numberedList',
+            '|',
+            'indent',
+            'outdent',
+            '|',
+            'codeBlock',
+            'blockQuote',
+            'insertTable',
+            'undo',
+            'redo',
+        ]
+    },
+    image: {
+        toolbar: [
+            'imageStyle:full',
+            'imageStyle:side',
+            '|',
+            'imageTextAlternative'
+        ]
+    },
+    table: {
+        contentToolbar: [
+            'tableColumn',
+            'tableRow',
+            'mergeTableCells'
+        ]
+    },
+    height: 300,
+  };
+
   constructor(
     private nemicoService: NemicoService,
     private router: Router,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private messageService: MessageService
     ) {}
 
     ngOnInit(){
@@ -43,9 +86,11 @@ export class AggiungiNemicoComponent implements OnInit {
         next: (res) => {
           console.log('response is ',res)
           this.nemicoInserito = res;
+          this.messageService.add({severity: 'success', summary: 'succeso!', detail: 'Il nemico è stato perfettamente inserito'});
         },
         error: (err) => {
           console.log(err)
+          this.messageService.add({severity: 'error', summary: 'ERROR!', detail: 'L inserimento del nemico non è andato a buon fine'});
         }
       })
       this.nemicoService.datiNemico.next(nemico);
@@ -98,7 +143,6 @@ export class AggiungiNemicoComponent implements OnInit {
             immagine: ''
       })
 
-      this.router.navigate(['aggiungi-nemico']);
     }
 }
 

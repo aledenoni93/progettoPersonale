@@ -1,0 +1,29 @@
+<div class="detail-container">
+  <div class="container-button">
+    <a class="prev" (click)="visualizzaPrecedente()">zona precedente: {{area.areaPrecendente}}</a>
+    <a class="next"  (click)="visualizzaSuccessivo()">zona successiva: {{area.areaSuccessiva}}</a>
+  </div>
+
+  <div class="container-descrizione">
+    <div class="detail-immagine" [ngStyle]="{'background-image': 'url(' + area.immagine + ')'}"></div>
+    <div class="container-dettagli">
+      <h3 class="detail-nome">{{area.nome}}</h3>
+      <P class="detail-descrizione"><span [innerHTML]="area.descrizione"></span></P>
+    </div>
+  </div>
+
+  <div class="container-walkthrough">
+      <h3 class="titolo-walkthrough">Walkthrough</h3>
+      <P class="detail-walkthrough"><span [innerHTML]="area.walkthrough"></span></P>
+  </div>
+
+  <div class="container-mappa">
+    <h3 class="titolo-mappa">Mappa della zona</h3>
+    <div class="detail-mappa" [ngStyle]="{'background-image': 'url(' + area.immagineMappa + ')'}"></div>
+  </div>
+
+  <div class="container-button">
+      <a class="prev" (click)="visualizzaPrecedente()">zona precedente: {{area.areaPrecendente}}</a>
+      <a class="next"  (click)="visualizzaSuccessivo()">zona successiva: {{area.areaSuccessiva}}</a>
+  </div>
+</div>

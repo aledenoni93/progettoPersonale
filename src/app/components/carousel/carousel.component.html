@@ -1,7 +1,7 @@
 <ngb-carousel *ngIf="images.length > 1; else noSlide" [interval]="5000">
 	<ng-template ngbSlide *ngFor="let image of images; let i = index">
 		<div class="picsum-img-wrapper img-dimension">
-			<img [src]="percorso + image.id + '.png'" [alt]="image.label" />
+			<img class="img-fluid" [src]="percorso + image.id + '.png'" [alt]="image.label" />
 		</div>
 		<div class="carousel-caption">
 			<h3>{{image.label}}</h3>

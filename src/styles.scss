@@ -33,6 +33,28 @@ body {
   border-radius: 0px !important;
 }
 
+.container-form .input-form .p-password {
+  width: 70% !important;
+  height: 43px !important;
+  border: 1px solid #767575 !important;
+  margin-left: 15% !important;
+}
+
+// .container-form .input-form .p-password .form-login:hover{
+//   border: 3px solid #D23C00;
+// }
+
+.container-form .input-form .p-password .p-inputtext {
+  height: 40px;
+}
+
+.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none !important;
+  border-color: #2196F3;
+}
+
 .modal-header {
   display: flex;
   flex-shrink: 0;
@@ -118,20 +140,49 @@ p.titolo-paginatore {
   box-shadow: 0 0 0 0.2rem #9B3814 !important;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 480px) {
+.descrizione .ck-editor__editable {
+  min-height: 200px!important;
+  max-height: 200px!important;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
 
   p.titolo-paginatore {
-    font-size: 18px;
+    font-size: 20px;
     margin-left:2%;
+  }
+
+    .p-password, .p-inputtext {
+      width: 94% !important;
+      margin-left: 3% !important;
+    }
+
+ }
+
+ @media only screen and (min-width: 375px) and (max-width: 425px) {
+
+  p.titolo-paginatore {
+    font-size: 16px;
+    margin-left: 2%;
+  }
+
+  .p-password, .p-inputtext {
+    width: 94% !important;
+    margin-left: 3% !important;
   }
 
  }
 
- @media only screen and (min-width: 481px) and (max-width: 768px) {
+ @media only screen and (min-width: 425px) and (max-width: 768px) {
 
   p.titolo-paginatore {
     font-size: 18px;
-    margin-left: 15%;
+    margin-left: 17%;
+  }
+
+  .p-password, .p-inputtext {
+    width: 95% !important;
+    margin-left: 2.5% !important;
   }
 
  }
@@ -140,9 +191,16 @@ p.titolo-paginatore {
 
   p.titolo-paginatore {
     font-size: 18px;
-    margin-left: 20%;
+    margin-left: 22%;
   }
+
+  .container-form .input-form .p-password {
+    width: 90% !important;
+    margin-left: 5% !important;
+  }
+
  }
+
 
 
 

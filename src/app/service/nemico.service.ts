@@ -9,12 +9,13 @@ import { ReplaySubject } from 'rxjs';
 })
 export class NemicoService {
 
-  datiNemico =  new ReplaySubject;
+  datiNemico =  new ReplaySubject ();
+  testoCercato = new ReplaySubject ();
   apiBaseUrl = 'api/nemici';
 
   constructor(private http: HttpClient) { }
 
-  getNemici(): Observable<Nemico[]> {
+  getNemici() {
     return this.http.get<Nemico[]>(`${this.apiBaseUrl}/`);
   }
 
@@ -24,5 +25,9 @@ export class NemicoService {
 
   insertNemico(nemico: any): Observable<any> {
     return this.http.post<any>(`${this.apiBaseUrl}/`, nemico)
+  }
+
+  findNemici(text: string): Observable<Nemico[]>{
+    return this.http.get<Nemico[]>(`${this.apiBaseUrl}/cerca/${text}`)
   }
 }
