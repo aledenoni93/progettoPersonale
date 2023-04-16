@@ -15,7 +15,7 @@ import { ToastModule} from 'primeng/toast';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { MaterialExampleModule } from 'src/material.module';
 
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './shared/header/header.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { HomeComponent } from './components/home/home.component';
 import { NemiciComponent } from './components/nemici/nemici.component';
